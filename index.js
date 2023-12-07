@@ -50,6 +50,6 @@ app.listen(3000, async () => {
         await conn()
         console.log("server started on port 3000")
     }catch(e){
-        console.log("err")
+        console.log("Error ", err)
     }
 })
