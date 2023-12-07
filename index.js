@@ -22,7 +22,7 @@ app.post("/register", async(req, res) => {
         userCollection.insertOne(convertedJson);
         return res.status(200).send({ msg: "User Successfully registered" });
     }
-    return res.status(403).send({err:"user exist"})
+    return res.status(400).send({err:"user exist"})
 })
 app.post("/login", async (req, res) => {
     let jsonData = JSON.stringify(req.body);
