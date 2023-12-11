@@ -63,8 +63,8 @@ app.post("/create-checkout-session", async (req, res) => {
         payment_method_types:["card"],
         line_items: lineItems,
         mode: 'payment',
-        success_url: `http://localhost:5173/success`,
-        cancel_url: `http://localhost:5173/cartdetails`,
+        success_url: `https://ecommerce-react01.netlify.app/success`,
+        cancel_url: `https://ecommerce-react01.netlify.app/cartdetails`,
     });
 
     res.json({id:session.id})
